@@ -10,29 +10,30 @@ gsap.registerPlugin(ScrollTrigger);
 // Experience data - customize these
 const experiences = [
     {
-        title: 'Full Stack Developer Intern',
-        company: 'Tech Company',
+        title: 'Freelance Web Developer',
+        company: 'Self-employed',
         location: 'Remote',
         period: 'Jan 2024 - Present',
         description: [
             'Developed and maintained web applications using React and Node.js',
-            'Collaborated with the team to implement new features and fix bugs',
+            'Built responsive websites for small businesses and startups',
             'Participated in code reviews and contributed to improving code quality',
         ],
-        technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
+        technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Next.js', 'Prisma'],
     },
+
     {
-        title: 'Freelance Web Developer',
-        company: 'Self-employed',
-        location: 'Remote',
-        period: 'Jun 2023 - Dec 2023',
+        title: 'Quality Control Engineer',
+        company: 'Sterlite Technologies Ltd.',
+        location: 'Aurangabad',
+        period: 'Jul 2018 - Dec 2018',
         description: [
-            'Built responsive websites for small businesses and startups',
-            'Implemented SEO best practices and improved site performance',
-            'Managed client relationships and project timelines',
+            'Responsible for testing the quality of the products',
+            'Conducted tests to ensure that the products met the required standards',
+            'Documented the results of the tests and reported any issues to the team',
         ],
-        technologies: ['HTML/CSS', 'JavaScript', 'WordPress', 'Figma'],
-    },
+        technologies: ['Optical Fiber'],
+    }
 ];
 
 export function Experience() {
