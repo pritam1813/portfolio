@@ -11,39 +11,57 @@ gsap.registerPlugin(ScrollTrigger);
 // Education data - customize these
 const education = [
     {
-        degree: 'Bachelor of Technology',
+        degree: 'Master of Computer Applications',
         field: 'Computer Science & Engineering',
-        institution: 'Your University Name',
-        location: 'City, Country',
-        period: '2020 - 2024',
-        grade: '8.5 CGPA',
+        institution: 'Jadavpur University',
+        location: 'Kolkata, India',
+        period: '2024 - Present',
+        grade: '7.55 CGPA',
         highlights: [
-            'Relevant coursework: Data Structures, Algorithms, Web Development, DBMS',
-            "Dean's List for academic excellence",
-            'Led the college tech club',
+            'Relevant coursework: Data Structures, Algorithms, Web Development, DBMS'
+        ],
+    },
+    {
+        degree: 'Bachelor of Computer Applications',
+        field: 'Computer Science & Engineering',
+        institution: 'IGNOU',
+        location: 'Delhi, India',
+        period: '2020 - 2023',
+        grade: '63.79%',
+        highlights: [
+            'Relevant coursework: Data Structures, Algorithms'
+        ],
+    },
+    {
+        degree: 'Diploma in Electronics and Telecommunication Engineering',
+        field: 'Electronics and Telecommunication Engineering',
+        institution: 'RamaKrishna Mission Shilpamandira',
+        location: 'Howrah, India',
+        period: '2015 - 2018',
+        grade: '8.3 CGPA',
+        highlights: ['Polytechnic'
         ],
     },
     {
         degree: 'Higher Secondary (12th)',
         field: 'Science Stream',
-        institution: 'Your School Name',
-        location: 'City, Country',
-        period: '2018 - 2020',
-        grade: '92%',
+        institution: 'Netaji Vidyayatan',
+        location: 'Howrah, India',
+        period: '2013 - 2015',
+        grade: '67.8',
         highlights: [
-            'PCM with Computer Science',
-            'School topper in Computer Science',
+            'PCM with Biology',
         ],
     },
     {
         degree: 'Secondary (10th)',
-        field: 'General',
-        institution: 'Your School Name',
-        location: 'City, Country',
-        period: '2018',
-        grade: '95%',
+        field: 'Computer Science',
+        institution: 'Maria\'s Day School',
+        location: 'Howrah, India',
+        period: '2012',
+        grade: '68.3%',
         highlights: [
-            'School rank holder',
+            'ICSE',
         ],
     },
 ];
