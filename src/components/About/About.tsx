@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 // Highlights data - customize these
 const highlights = [
     { icon: '💻', label: 'Web Development', value: 'Full Stack' },
-    { icon: '🎓', label: 'Education', value: 'CS Graduate' },
+    { icon: '🎓', label: 'Education', value: 'MCA' },
     { icon: '🚀', label: 'Projects', value: '10+' },
-    { icon: '☕', label: 'Coffee Consumed', value: '∞' },
+    { icon: '☕', label: 'Tea Consumed', value: '∞' },
 ];
 
 export function About() {
@@ -57,12 +57,12 @@ export function About() {
                         <p>
                             Hi there! I'm a <strong>Full Stack Developer</strong> with a passion for
                             creating beautiful, functional, and user-friendly web applications.
-                            I recently graduated with a degree in Computer Science and am excited
+                            I am currently pursuing my MCA from <strong>Jadavpur University</strong> and am excited
                             to bring my skills to the professional world.
                         </p>
                         <p>
                             I specialize in modern web technologies like <span className="text-gradient">React</span>,
-                            <span className="text-gradient"> Node.js</span>, and <span className="text-gradient">TypeScript</span>.
+                            <span className="text-gradient"> Next.js</span>, and <span className="text-gradient">TypeScript</span>.
                             I believe in writing clean, maintainable code and creating
                             experiences that users love.
                         </p>
