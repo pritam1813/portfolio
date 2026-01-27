@@ -1,0 +1,64 @@
+.skill-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.skill-bar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-bar__name {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+}
+
+.skill-bar__level {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+}
+
+.skill-bar__track {
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.skill-bar__fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transform-origin: left center;
+    position: relative;
+}
+
+.skill-bar__fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
+.skill-bar__fill--blue {
+    background: var(--gradient-primary);
+    box-shadow: var(--glow-blue);
+}
+
+.skill-bar__fill--purple {
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink));
+    box-shadow: var(--glow-purple);
+}
+
+.skill-bar__fill--pink {
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-purple));
+    box-shadow: var(--glow-pink);
+}
+
+.skill-bar__fill--green {
+    background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+    box-shadow: 0 0 20px var(--neon-green), 0 0 40px rgba(0, 255, 135, 0.3);
+}

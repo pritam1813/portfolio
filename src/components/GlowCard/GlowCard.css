@@ -1,0 +1,67 @@
+.glow-card {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.glow-card__glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    filter: blur(80px);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.glow-card--blue .glow-card__glow {
+    background: var(--neon-blue);
+}
+
+.glow-card--purple .glow-card__glow {
+    background: var(--neon-purple);
+}
+
+.glow-card--pink .glow-card__glow {
+    background: var(--neon-pink);
+}
+
+.glow-card__content {
+    position: relative;
+    z-index: 1;
+    padding: var(--space-xl);
+}
+
+.glow-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1),
+            transparent 50%,
+            transparent);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.glow-card:hover::before {
+    background: linear-gradient(135deg,
+            rgba(0, 212, 255, 0.3),
+            transparent 50%,
+            rgba(189, 0, 255, 0.3));
+}

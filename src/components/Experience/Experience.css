@@ -1,0 +1,192 @@
+.experience__header {
+    text-align: center;
+    margin-bottom: var(--space-4xl);
+}
+
+/* Timeline */
+.experience__timeline {
+    position: relative;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.experience__timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gradient-primary);
+    transform: translateX(-50%);
+    box-shadow: var(--glow-blue);
+}
+
+@media (max-width: 768px) {
+    .experience__timeline-line {
+        left: 20px;
+    }
+}
+
+/* Cards */
+.experience__card {
+    position: relative;
+    width: 50%;
+    padding: var(--space-lg);
+}
+
+.experience__card--left {
+    padding-right: var(--space-3xl);
+    text-align: right;
+}
+
+.experience__card--right {
+    margin-left: 50%;
+    padding-left: var(--space-3xl);
+}
+
+@media (max-width: 768px) {
+
+    .experience__card,
+    .experience__card--left,
+    .experience__card--right {
+        width: 100%;
+        margin-left: 0;
+        padding-left: calc(40px + var(--space-xl));
+        padding-right: var(--space-lg);
+        text-align: left;
+    }
+}
+
+/* Timeline dot */
+.experience__card-dot {
+    position: absolute;
+    top: calc(var(--space-lg) + 10px);
+    width: 16px;
+    height: 16px;
+    background: var(--bg-primary);
+    border: 3px solid var(--neon-blue);
+    border-radius: 50%;
+    box-shadow: var(--glow-blue);
+    z-index: 1;
+}
+
+.experience__card--left .experience__card-dot {
+    right: calc(var(--space-3xl) - var(--space-lg) - 8px);
+}
+
+.experience__card--right .experience__card-dot {
+    left: calc(var(--space-3xl) - var(--space-lg) - 8px);
+}
+
+@media (max-width: 768px) {
+    .experience__card-dot {
+        left: 12px !important;
+        right: auto !important;
+    }
+}
+
+/* Card content */
+.experience__card-content {
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.experience__card-content:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-blue);
+}
+
+.experience__period {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--neon-blue);
+}
+
+.experience__title {
+    font-size: var(--fs-xl);
+    margin: var(--space-sm) 0;
+}
+
+.experience__company {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.experience__company span {
+    color: var(--text-muted);
+}
+
+.experience__description {
+    margin: var(--space-lg) 0;
+    padding-left: var(--space-lg);
+    list-style: none;
+}
+
+.experience__card--left .experience__description {
+    padding-left: 0;
+    padding-right: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+    .experience__card--left .experience__description {
+        padding-left: var(--space-lg);
+        padding-right: 0;
+    }
+}
+
+.experience__description li {
+    position: relative;
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+}
+
+.experience__description li::before {
+    content: '▹';
+    position: absolute;
+    left: calc(-1 * var(--space-lg));
+    color: var(--neon-blue);
+}
+
+.experience__card--left .experience__description li::before {
+    left: auto;
+    right: calc(-1 * var(--space-lg));
+}
+
+@media (max-width: 768px) {
+    .experience__card--left .experience__description li::before {
+        left: calc(-1 * var(--space-lg));
+        right: auto;
+    }
+}
+
+/* Tech tags */
+.experience__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.experience__card--left .experience__technologies {
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .experience__card--left .experience__technologies {
+        justify-content: flex-start;
+    }
+}
+
+.experience__tech-tag {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--neon-blue);
+    border-radius: var(--radius-sm);
+}

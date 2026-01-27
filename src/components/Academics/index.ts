@@ -1,0 +1,1 @@
+export { Academics } from './Academics';

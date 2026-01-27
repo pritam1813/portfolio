@@ -1,0 +1,82 @@
+.magnetic-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px solid var(--neon-blue);
+    border-radius: var(--radius-full);
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+    text-decoration: none;
+}
+
+.magnetic-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: -1;
+}
+
+.magnetic-button:hover::before {
+    opacity: 1;
+}
+
+.magnetic-button:hover {
+    border-color: transparent;
+    box-shadow: var(--glow-blue);
+}
+
+.magnetic-button__text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    position: relative;
+    z-index: 1;
+}
+
+/* Primary variant */
+.magnetic-button--primary {
+    background: var(--gradient-primary);
+    border: none;
+}
+
+.magnetic-button--primary::before {
+    background: var(--gradient-glow);
+}
+
+/* Ghost variant */
+.magnetic-button--ghost {
+    border-color: var(--text-muted);
+}
+
+.magnetic-button--ghost:hover {
+    border-color: var(--neon-purple);
+    box-shadow: var(--glow-purple);
+}
+
+/* Small size */
+.magnetic-button--sm {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--fs-xs);
+}
+
+/* Large size */
+.magnetic-button--lg {
+    padding: var(--space-lg) var(--space-2xl);
+    font-size: var(--fs-base);
+}

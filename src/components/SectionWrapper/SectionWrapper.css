@@ -1,0 +1,8 @@
+.section-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-wrapper__content {
+    will-change: transform, opacity;
+}

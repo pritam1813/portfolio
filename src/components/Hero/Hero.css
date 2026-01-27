@@ -1,0 +1,156 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Animated gradient blob */
+.hero__blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle,
+            rgba(189, 0, 255, 0.15) 0%,
+            rgba(0, 212, 255, 0.1) 50%,
+            transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Social links - left side */
+.hero__socials {
+    position: fixed;
+    left: var(--space-lg);
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    z-index: var(--z-above);
+}
+
+@media (min-width: 1024px) {
+    .hero__socials {
+        display: flex;
+    }
+}
+
+.hero__social-link {
+    color: var(--text-muted);
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.hero__social-link:hover {
+    color: var(--neon-blue);
+    transform: translateY(-3px);
+}
+
+.hero__socials-line {
+    width: 1px;
+    height: 100px;
+    background: linear-gradient(to top, var(--neon-blue), transparent);
+}
+
+/* Content */
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    max-width: 900px;
+}
+
+.hero__greeting {
+    font-family: var(--font-mono);
+    font-size: var(--fs-lg);
+    color: var(--text-secondary);
+}
+
+.hero__name {
+    font-size: var(--fs-hero);
+    line-height: 1;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.hero__tagline {
+    font-size: var(--fs-xl);
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.hero__tagline .split-word {
+    display: inline-block;
+}
+
+/* CTA Buttons */
+.hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+/* Scroll indicator */
+.hero__scroll-indicator {
+    position: absolute;
+    bottom: var(--space-2xl);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+}
+
+.hero__scroll-indicator svg {
+    opacity: 0.6;
+}
+
+/* Avatar container - for split layout */
+/*
+.hero__avatar-container {
+  position: relative;
+}
+
+.hero__avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background: 
+    linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+    var(--gradient-primary) border-box;
+  box-shadow: var(--glow-purple);
+}
+
+.hero__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+*/

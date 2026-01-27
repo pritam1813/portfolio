@@ -1,0 +1,93 @@
+.academics__header {
+    text-align: center;
+    margin-bottom: var(--space-4xl);
+}
+
+/* Grid */
+.academics__grid {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+    .academics__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .academics__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card */
+.academics__card .glow-card__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.academics__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+.academics__period {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+}
+
+.academics__grade {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--neon-purple);
+    background: rgba(189, 0, 255, 0.1);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+.academics__degree {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--space-xs);
+}
+
+.academics__field {
+    color: var(--neon-blue);
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.academics__institution {
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.academics__institution span {
+    color: var(--text-muted);
+}
+
+.academics__highlights {
+    margin-top: var(--space-lg);
+    padding-left: var(--space-lg);
+    list-style: none;
+}
+
+.academics__highlights li {
+    position: relative;
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+}
+
+.academics__highlights li::before {
+    content: '▹';
+    position: absolute;
+    left: calc(-1 * var(--space-lg));
+    color: var(--neon-purple);
+}
