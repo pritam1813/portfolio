@@ -1,75 +1,99 @@
-# React + TypeScript + Vite
+# Pritam Dhara | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, cyberpunk-themed developer portfolio built with React, TypeScript, and GSAP animations.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [pritam1813.github.io/portfolio](https://pritam1813.github.io/portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio Preview](./public/preview.png) <!-- TODO: Add a screenshot -->
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Cyberpunk Design** - Neon gradients, glassmorphism, and dark theme
+- **Smooth Animations** - GSAP ScrollTrigger, Framer Motion, and Lenis smooth scroll
+- **Horizontal Project Gallery** - Scroll-triggered horizontal carousel
+- **Optimized Images** - Auto-converted to WebP using vite-imagetools
+- **Responsive** - Works on all screen sizes
+- **Contact Form** - Formspree integration
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+| Category | Technologies |
+|----------|-------------|
+| Framework | React 19, TypeScript |
+| Build Tool | Vite 7, Bun |
+| Animations | GSAP, Framer Motion, Lenis |
+| Styling | CSS Variables, Glassmorphism |
+| Deployment | GitHub Pages |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Quick Start
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repo
+git clone https://github.com/pritam1813/portfolio.git
+cd portfolio
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Install dependencies
+bun install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start dev server
+bun dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/       # React components
+│   ├── Header/
+│   ├── Hero/
+│   ├── Projects/
+│   ├── Experience/
+│   ├── Academics/
+│   ├── Contact/
+│   └── Footer/
+├── assets/           # Optimized images
+├── styles/           # Global CSS & design tokens
+└── App.tsx           # Main app component
+```
+
+## 🔧 Configuration
+
+### Customize Content
+- **Projects:** Edit `src/components/Projects/Projects.tsx`
+- **Experience:** Edit `src/components/Experience/Experience.tsx`
+- **Contact Info:** Edit `src/components/Contact/Contact.tsx`
+- **Social Links:** Edit `src/components/Footer/Footer.tsx`
+
+### Formspree Setup
+1. Create a form at [formspree.io](https://formspree.io)
+2. Replace the form ID in `src/components/Contact/Contact.tsx`:
+   ```tsx
+   await fetch('https://formspree.io/f/YOUR_FORM_ID', ...)
+   ```
+3. Disable reCAPTCHA in Formspree settings for AJAX submissions
+
+## 🌐 Deployment
+
+The site auto-deploys to GitHub Pages on push to `main` branch.
+
+### Manual Setup
+1. Push to GitHub
+2. Go to repo **Settings → Pages**
+3. Set Source to **GitHub Actions**
+4. Wait for build to complete
+
+### Custom Domain
+Add a `CNAME` file in `public/` with your domain, then update `vite.config.ts`:
+```ts
+base: '/',
+```
+
+## 📄 License
+
+MIT License - feel free to use this as a template for your own portfolio!
+
+---
+
+Built with ❤️ by [Pritam Dhara](https://github.com/pritam1813)
