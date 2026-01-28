@@ -6,6 +6,13 @@ import { AnimatedText } from '../AnimatedText';
 import { MagneticButton } from '../MagneticButton';
 import './Projects.css';
 
+// Import optimized images with vite-imagetools
+// w=800 resizes to 800px width, format=webp converts to WebP, quality=80 sets compression
+import ynoteduImg from '../../assets/projects/ynotedu.png?w=800&format=webp&quality=80';
+import shrinkyImg from '../../assets/projects/shrinky.png?w=800&format=webp&quality=80';
+import tradingBotImg from '../../assets/projects/trading_bot.png?w=800&format=webp&quality=80';
+import pclystImg from '../../assets/projects/pclyst.png?w=800&format=webp&quality=80';
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Projects data - customize these (4 projects as requested)
@@ -15,7 +22,7 @@ const projects = [
         title: 'LMS Platform',
         description:
             'A full-featured LMS platform with user authentication, course management, cart functionality, and payment integration.',
-        image: '/projects/ynotedu.png',
+        image: ynoteduImg,
         technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'PhonePe'],
         liveUrl: 'https://www.ynotedu.com/',
         githubUrl: 'https://github.com/pritam1813/ynotedu',
@@ -26,7 +33,7 @@ const projects = [
         title: 'URL shortener App',
         description:
             'A simple, yet powerful URL shortener built using Next.js, MongoDB, and SHADCN',
-        image: '/projects/shrinky.png',
+        image: shrinkyImg,
         technologies: ['Next.js', 'TypeScript', 'MongoDB', 'SHADCN'],
         liveUrl: 'https://shrinky-v2.vercel.app/',
         githubUrl: 'https://github.com/pritam1813/shrinky-v2',
@@ -37,7 +44,7 @@ const projects = [
         title: 'Crypto Trading Bot',
         description:
             'A high-frequency scalping bot for Binance USDT-M Futures that trades based on live orderbook data.',
-        image: '/projects/trading_bot.png',
+        image: tradingBotImg,
         technologies: ['TypeScript', 'Bun', 'Binance API', 'WebSocket'],
         liveUrl: 'https://github.com/pritam1813/orderbook_trader',
         githubUrl: 'https://github.com/pritam1813/orderbook_trader',
@@ -48,7 +55,7 @@ const projects = [
         title: 'Blogging Platform',
         description:
             'A full-featured blogging platform with user authentication, post management, and comment functionality.',
-        image: '/projects/pclyst.png',
+        image: pclystImg,
         technologies: ['Next.js', 'Next UI', 'Tailwind CSS', 'GraphQL'],
         liveUrl: 'https://pclyst.vercel.app',
         githubUrl: 'https://github.com/pritam1813/pclyst',
