@@ -1,22 +1,19 @@
 /// <reference types="vite/client" />
+/// <reference types="vite-imagetools" />
 
-// vite-imagetools type declarations
-declare module '*.png?*' {
+// vite-imagetools specific imports - declare modules for imagetools query params
+declare module '*&format=webp' {
     const src: string;
     export default src;
 }
 
-declare module '*.jpg?*' {
+declare module '*&quality=80' {
     const src: string;
     export default src;
 }
 
-declare module '*.jpeg?*' {
+declare module '*?w=800&format=webp&quality=80' {
     const src: string;
     export default src;
 }
 
-declare module '*.webp?*' {
-    const src: string;
-    export default src;
-}
