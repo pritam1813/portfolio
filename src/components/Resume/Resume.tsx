@@ -47,7 +47,7 @@ export function Resume() {
                     </div>
                     <div className="resume__action">
                         <MagneticButton
-                            href="/resume.pdf"
+                            href="/PritamDhara_Resume.pdf"
                             download
                             className="magnetic-button--primary magnetic-button--lg"
                         >

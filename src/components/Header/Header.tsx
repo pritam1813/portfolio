@@ -104,7 +104,7 @@ export function Header() {
                             </a>
                         ))}
                         <MagneticButton
-                            href="/resume.pdf"
+                            href="/PritamDhara_Resume.pdf"
                             download
                             className="magnetic-button--sm"
                         >
@@ -144,7 +144,7 @@ export function Header() {
                         </a>
                     ))}
                     <MagneticButton
-                        href="/resume.pdf"
+                        href="/PritamDhara_Resume.pdf"
                         download
                         className="mobile-menu__resume"
                     >
