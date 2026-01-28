@@ -12,46 +12,46 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
     {
         id: 1,
-        title: 'E-Commerce Platform',
+        title: 'LMS Platform',
         description:
-            'A full-featured e-commerce platform with user authentication, product management, cart functionality, and payment integration.',
-        image: '/projects/project-1.jpg', // Add your project images
-        technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-        liveUrl: 'https://example.com',
-        githubUrl: 'https://github.com/yourusername/project',
+            'A full-featured LMS platform with user authentication, course management, cart functionality, and payment integration.',
+        image: '/projects/ynotedu.png',
+        technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'PhonePe'],
+        liveUrl: 'https://www.ynotedu.com/',
+        githubUrl: 'https://github.com/pritam1813/ynotedu',
         featured: true,
     },
     {
         id: 2,
-        title: 'Task Management App',
+        title: 'URL shortener App',
         description:
-            'A collaborative task management application with real-time updates, drag-and-drop interface, and team features.',
-        image: '/projects/project-2.jpg',
-        technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Socket.io'],
-        liveUrl: 'https://example.com',
-        githubUrl: 'https://github.com/yourusername/project',
+            'A simple, yet powerful URL shortener built using Next.js, MongoDB, and SHADCN',
+        image: '/projects/shrinky.png',
+        technologies: ['Next.js', 'TypeScript', 'MongoDB', 'SHADCN'],
+        liveUrl: 'https://shrinky-v2.vercel.app/',
+        githubUrl: 'https://github.com/pritam1813/shrinky-v2',
         featured: true,
     },
     {
         id: 3,
-        title: 'AI Chat Interface',
+        title: 'Crypto Trading Bot',
         description:
-            'An intelligent chat interface powered by AI with context-aware responses and beautiful animations.',
-        image: '/projects/project-3.jpg',
-        technologies: ['React', 'Python', 'FastAPI', 'OpenAI'],
-        liveUrl: 'https://example.com',
-        githubUrl: 'https://github.com/yourusername/project',
+            'A high-frequency scalping bot for Binance USDT-M Futures that trades based on live orderbook data.',
+        image: '/projects/trading_bot.png',
+        technologies: ['TypeScript', 'Bun', 'Binance API', 'WebSocket'],
+        liveUrl: 'https://github.com/pritam1813/orderbook_trader',
+        githubUrl: 'https://github.com/pritam1813/orderbook_trader',
         featured: true,
     },
     {
         id: 4,
-        title: 'Portfolio Website',
+        title: 'Blogging Platform',
         description:
-            'This very portfolio website you are viewing! Built with React, GSAP, and lots of attention to detail.',
-        image: '/projects/project-4.jpg',
-        technologies: ['React', 'TypeScript', 'GSAP', 'Lenis'],
-        liveUrl: '#',
-        githubUrl: 'https://github.com/yourusername/portfolio',
+            'A full-featured blogging platform with user authentication, post management, and comment functionality.',
+        image: '/projects/pclyst.png',
+        technologies: ['Next.js', 'Next UI', 'Tailwind CSS', 'GraphQL'],
+        liveUrl: 'https://pclyst.vercel.app',
+        githubUrl: 'https://github.com/pritam1813/pclyst',
         featured: true,
     },
 ];
@@ -127,11 +127,11 @@ export function Projects() {
                         <article key={project.id} className="project-card" data-cursor="expand">
                             {/* Project image */}
                             <div className="project-card__image">
-                                <div className="project-card__image-placeholder">
+                                {/* <div className="project-card__image-placeholder">
                                     <span>{project.title.charAt(0)}</span>
-                                </div>
+                                </div> */}
                                 {/* Uncomment when you have images */}
-                                {/* <img src={project.image} alt={project.title} /> */}
+                                <img src={project.image} alt={project.title} />
                                 <div className="project-card__overlay">
                                     <div className="project-card__links">
                                         <MagneticButton
@@ -170,7 +170,7 @@ export function Projects() {
                         <div className="project-card__cta-content">
                             <h3>Want to see more?</h3>
                             <p>Check out my GitHub for more projects and experiments.</p>
-                            <MagneticButton href="https://github.com/yourusername">
+                            <MagneticButton href="https://github.com/pritam1813">
                                 View GitHub
                             </MagneticButton>
                         </div>

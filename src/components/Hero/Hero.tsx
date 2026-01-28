@@ -22,7 +22,7 @@ export function Hero() {
     const taglineRef = useRef<HTMLParagraphElement>(null);
     const ctaRef = useRef<HTMLDivElement>(null);
     const socialsRef = useRef<HTMLDivElement>(null);
-    const scrollIndicatorRef = useRef<HTMLDivElement>(null);
+    // const scrollIndicatorRef = useRef<HTMLDivElement>(null);
     const blobRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
@@ -58,22 +58,22 @@ export function Hero() {
             ease: 'power3.out',
         }, '-=0.3');
 
-        // Scroll indicator
-        tl.from(scrollIndicatorRef.current, {
-            opacity: 0,
-            y: -20,
-            duration: 0.5,
-            ease: 'power3.out',
-        }, '-=0.2');
+        // Scroll indicator (commented out since element is commented)
+        // tl.from(scrollIndicatorRef.current, {
+        //     opacity: 0,
+        //     y: -20,
+        //     duration: 0.5,
+        //     ease: 'power3.out',
+        // }, '-=0.2');
 
         // Scroll indicator bounce animation
-        gsap.to(scrollIndicatorRef.current, {
-            y: 10,
-            duration: 1.5,
-            repeat: -1,
-            yoyo: true,
-            ease: 'power1.inOut',
-        });
+        // gsap.to(scrollIndicatorRef.current, {
+        //     y: 10,
+        //     duration: 1.5,
+        //     repeat: -1,
+        //     yoyo: true,
+        //     ease: 'power1.inOut',
+        // });
 
     }, { scope: heroRef });
 
