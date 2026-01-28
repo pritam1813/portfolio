@@ -9,6 +9,7 @@ interface MagneticButtonProps {
     onClick?: () => void;
     strength?: number;
     download?: boolean;
+    type?: 'button' | 'submit' | 'reset';
 }
 
 export function MagneticButton({
@@ -18,6 +19,7 @@ export function MagneticButton({
     onClick,
     strength = 0.5,
     download = false,
+    type = 'button',
 }: MagneticButtonProps) {
     const buttonRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
     const textRef = useRef<HTMLSpanElement>(null);
@@ -95,6 +97,7 @@ export function MagneticButton({
     return (
         <button
             ref={buttonRef as React.RefObject<HTMLButtonElement>}
+            type={type}
             onClick={onClick}
             {...commonProps}
         >
