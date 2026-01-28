@@ -5,9 +5,9 @@ import './Footer.css';
 const currentYear = new Date().getFullYear();
 
 const footerLinks = [
-    { label: 'GitHub', href: 'https://github.com/yourusername' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
-    { label: 'Twitter', href: 'https://twitter.com/yourusername' },
+    { label: 'GitHub', href: 'https://github.com/pritam1813' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/pritam1813' },
+    { label: 'LeetCode', href: 'https://leetcode.com/u/Pritam1813' },
 ];
 
 export function Footer() {
@@ -22,7 +22,7 @@ export function Footer() {
                 <div className="footer__brand">
                     <span className="footer__logo">
                         <span className="text-gradient">{'<'}</span>
-                        Dev
+                        PritamDhara
                         <span className="text-gradient">{'/>'}</span>
                     </span>
                     <p className="footer__tagline">
@@ -71,7 +71,7 @@ export function Footer() {
             <div className="footer__bottom">
                 <div className="container footer__bottom-content">
                     <p className="footer__copyright">
-                        © {currentYear} Your Name. All rights reserved.
+                        © {currentYear} Pritam Dhara. All rights reserved.
                     </p>
                     <p className="footer__credits">
                         Built with <span className="text-gradient">♥</span> using React, TypeScript & GSAP

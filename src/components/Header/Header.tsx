@@ -86,7 +86,7 @@ export function Header() {
                     <a href="#hero" className="header__logo" onClick={(e) => handleNavClick(e, '#hero')}>
                         <span className="header__logo-text">
                             <span className="text-gradient">{'<'}</span>
-                            Dev
+                            PritamDhara
                             <span className="text-gradient">{'/>'}</span>
                         </span>
                     </a>
